@@ -1,0 +1,334 @@
+/* RESET */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* VARIABLES */
+
+:root{
+
+    --primary: #c6a16e;
+
+    --gold: #e0c08f;
+
+    --brown: #4b3a2f;
+
+    --dark: #2b211b;
+
+    --text: #3e322c;
+
+    --gray: #7a6d66;
+
+    --white: #ffffff;
+}
+
+/* BODY */
+
+body{
+
+    font-family: 'Inter', sans-serif;
+
+    background:
+    linear-gradient(
+    to bottom,
+    #f8f4ee,
+    #efe5d8);
+
+    min-height: 100vh;
+}
+
+/* CONTAINER */
+
+.login-container{
+
+    width: 100%;
+
+    min-height: 100vh;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+}
+
+/* LEFT SIDE */
+
+.login-image{
+
+    position: relative;
+
+    background:
+    url('login_novacam.png');
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+/* OVERLAY */
+
+.overlay{
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+    linear-gradient(
+    rgba(43,33,27,0.35),
+    rgba(43,33,27,0.55));
+}
+
+/* IMAGE CONTENT */
+
+.image-content{
+
+    position: relative;
+
+    z-index: 2;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 40px;
+}
+
+.image-content h1{
+
+    font-family:
+    'Cormorant Garamond',
+    serif;
+
+    font-size: 6rem;
+
+    margin-bottom: 20px;
+
+    letter-spacing: 2px;
+
+    text-shadow:
+    0 5px 20px rgba(0,0,0,0.35);
+}
+
+.image-content p{
+
+    font-size: 1.1rem;
+
+    line-height: 1.8;
+
+    max-width: 500px;
+
+    text-shadow:
+    0 3px 10px rgba(0,0,0,0.25);
+}
+
+/* RIGHT SIDE */
+
+.login-form{
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 40px;
+}
+
+/* FORM BOX */
+
+.form-box{
+
+    width: 100%;
+
+    max-width: 450px;
+
+    background:
+    rgba(255,255,255,0.65);
+
+    backdrop-filter: blur(12px);
+
+    padding: 50px;
+
+    border-radius: 30px;
+
+    box-shadow:
+    0 20px 40px rgba(0,0,0,0.08);
+
+    border:
+    1px solid rgba(198,161,110,0.2);
+}
+
+/* TITLE */
+
+.form-box h2{
+
+    font-family:
+    'Cormorant Garamond',
+    serif;
+
+    font-size: 3rem;
+
+    color: var(--brown);
+
+    margin-bottom: 10px;
+}
+
+/* SUBTITLE */
+
+.subtitle{
+
+    color: var(--gray);
+
+    margin-bottom: 35px;
+}
+
+/* INPUT GROUP */
+
+.input-group{
+
+    display: flex;
+
+    flex-direction: column;
+
+    margin-bottom: 22px;
+}
+
+/* LABEL */
+
+.input-group label{
+
+    margin-bottom: 8px;
+
+    color: var(--brown);
+
+    font-weight: 500;
+}
+
+/* INPUT */
+
+.input-group input{
+
+    padding: 15px 18px;
+
+    border-radius: 15px;
+
+    border:
+    1px solid rgba(198,161,110,0.3);
+
+    background:
+    rgba(255,255,255,0.8);
+
+    outline: none;
+
+    font-size: 1rem;
+
+    transition: 0.3s;
+}
+
+/* INPUT FOCUS */
+
+.input-group input:focus{
+
+    border:
+    1px solid var(--primary);
+
+    box-shadow:
+    0 0 10px rgba(198,161,110,0.2);
+}
+
+/* BUTTON */
+
+.btn-login{
+
+    width: 100%;
+
+    padding: 16px;
+
+    border: none;
+
+    border-radius: 50px;
+
+    background:
+    linear-gradient(
+    135deg,
+    #c6a16e,
+    #e0c08f);
+
+    color: #2b211b;
+
+    font-size: 1rem;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+    margin-top: 10px;
+}
+
+/* BUTTON HOVER */
+
+.btn-login:hover{
+
+    transform: translateY(-3px);
+
+    box-shadow:
+    0 10px 25px rgba(198,161,110,0.3);
+}
+
+/* REGISTER */
+
+.register-link{
+
+    margin-top: 25px;
+
+    text-align: center;
+
+    color: var(--gray);
+}
+
+.register-link a{
+
+    color: var(--primary);
+
+    text-decoration: none;
+
+    font-weight: 600;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+    .login-container{
+
+        grid-template-columns: 1fr;
+    }
+
+    .login-image{
+
+        min-height: 40vh;
+    }
+
+    .image-content h1{
+
+        font-size: 4rem;
+    }
+
+    .form-box{
+
+        padding: 35px;
+    }
+}

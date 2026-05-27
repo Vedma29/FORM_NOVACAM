@@ -1,0 +1,1188 @@
+/* RESET */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* VARIABLES */
+
+:root{
+
+    --primary:#d6b178;
+
+    --gold:#e7c992;
+
+    --brown:#3d2d24;
+
+    --dark:#171312;
+
+    --dark-card:#211c1a;
+
+    --text:#3d2d24;
+
+    --gray:#7d746f;
+
+    --bg:#f7f3ee;
+
+    --white:#ffffff;
+}
+
+/* BODY */
+
+body{
+
+    font-family:'Inter',sans-serif;
+
+    background:
+    linear-gradient(
+    135deg,
+    #f8f5f1,
+    #efe7dc);
+
+    color:var(--text);
+
+    overflow-x:hidden;
+
+    transition:.4s;
+}
+
+/* DASHBOARD */
+
+.dashboard{
+
+    display:grid;
+
+    grid-template-columns:280px 1fr;
+
+    min-height:100vh;
+}
+
+/* SIDEBAR */
+
+.sidebar{
+
+    background:
+    rgba(255,255,255,.55);
+
+    backdrop-filter:blur(15px);
+
+    border-right:
+    1px solid rgba(0,0,0,.05);
+
+    padding:35px 25px;
+
+    position:sticky;
+
+    top:0;
+
+    min-height:100vh;
+
+    display:flex;
+
+    flex-direction:column;
+
+    transition:.4s;
+}
+
+/* LOGO */
+
+.logo-area{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    margin-bottom:60px;
+}
+
+.logo-area img{
+
+    width:58px;
+}
+
+.logo-area h2{
+
+    font-family:
+    'Cormorant Garamond',
+    serif;
+
+    font-size:3rem;
+
+    color:var(--brown);
+}
+
+/* MENU */
+
+.menu{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:14px;
+}
+
+.menu a{
+
+    text-decoration:none;
+
+    padding:18px 22px;
+
+    border-radius:20px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    color:var(--brown);
+
+    font-size:1.05rem;
+
+    font-weight:500;
+
+    transition:.3s;
+}
+
+.menu a i{
+
+    font-size:1.1rem;
+}
+
+.menu a:hover,
+.menu a.active{
+
+    background:
+    linear-gradient(
+    135deg,
+    #d6b178,
+    #e7c992);
+
+    transform:translateX(5px);
+
+    color:#1d1d1d;
+}
+
+.menu a:hover i,
+.menu a.active i{
+
+    color:#1d1d1d;
+}
+
+/* PROFILE */
+
+.sidebar-profile{
+
+    margin-top:auto;
+
+    padding-top:40px;
+
+    border-top:
+    1px solid rgba(255,255,255,.05);
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+}
+
+.sidebar-profile img{
+
+    width:68px;
+
+    height:68px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    border:
+    3px solid rgba(214,177,120,.25);
+
+    box-shadow:
+    0 8px 25px rgba(0,0,0,.12);
+}
+
+.sidebar-profile h3{
+
+    font-size:1rem;
+
+    color:var(--brown);
+}
+
+.sidebar-profile span{
+
+    color:var(--gray);
+
+    font-size:.9rem;
+}
+
+/* LOGOUT */
+
+.logout-btn{
+
+    margin-top:20px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:10px;
+
+    text-decoration:none;
+
+    padding:16px;
+
+    border-radius:18px;
+
+    background:
+    rgba(214,177,120,.15);
+
+    color:var(--brown);
+
+    transition:.3s;
+}
+
+.logout-btn:hover{
+
+    background:
+    linear-gradient(
+    135deg,
+    #d6b178,
+    #e7c992);
+
+    color:#1d1d1d;
+}
+
+/* MAIN */
+
+.main-content{
+
+    padding:45px;
+}
+
+/* TOPBAR */
+
+.topbar{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:45px;
+}
+
+/* TITLE */
+
+.mini-title{
+
+    color:var(--primary);
+
+    font-weight:600;
+
+    margin-bottom:10px;
+
+    display:inline-block;
+}
+
+.topbar h1{
+
+    font-family:
+    'Cormorant Garamond',
+    serif;
+
+    font-size:4rem;
+
+    color:var(--brown);
+
+    line-height:1.1;
+}
+
+/* ACTIONS */
+
+.top-actions{
+
+    display:flex;
+
+    gap:15px;
+
+    align-items:center;
+}
+
+/* BUTTONS */
+
+.dark-btn,
+.notification-btn,
+.menu-toggle{
+
+    width:65px;
+
+    height:65px;
+
+    border:none;
+
+    border-radius:22px;
+
+    background:
+    rgba(255,255,255,.65);
+
+    backdrop-filter:blur(10px);
+
+    cursor:pointer;
+
+    position:relative;
+
+    transition:.3s;
+}
+
+.dark-btn:hover,
+.notification-btn:hover,
+.menu-toggle:hover{
+
+    transform:translateY(-5px);
+}
+
+.dark-btn i,
+.notification-btn i,
+.menu-toggle i{
+
+    font-size:1.2rem;
+
+    color:var(--brown);
+}
+
+/* MENU BUTTON */
+
+.menu-toggle{
+
+    display:none;
+}
+
+/* NOTIFICATION */
+
+.notification-wrapper{
+
+    position:relative;
+}
+
+.notification-dot{
+
+    width:12px;
+
+    height:12px;
+
+    background:#ff4d6d;
+
+    border-radius:50%;
+
+    position:absolute;
+
+    top:15px;
+
+    right:15px;
+}
+
+/* PANEL */
+
+.notification-panel{
+
+    position:absolute;
+
+    top:80px;
+
+    right:0;
+
+    width:280px;
+
+    background:
+    rgba(255,255,255,.95);
+
+    backdrop-filter:blur(12px);
+
+    border-radius:25px;
+
+    padding:25px;
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,.08);
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transform:translateY(10px);
+
+    transition:.3s;
+
+    z-index:100;
+}
+
+.notification-panel.active{
+
+    opacity:1;
+
+    visibility:visible;
+
+    transform:translateY(0);
+}
+
+.notification-panel h3{
+
+    margin-bottom:15px;
+
+    color:var(--brown);
+}
+
+.notification-panel p{
+
+    color:var(--gray);
+}
+
+/* SECTION HEADER */
+
+.section-header{
+
+    margin-bottom:30px;
+}
+
+.section-header h2{
+
+    font-family:
+    'Cormorant Garamond',
+    serif;
+
+    font-size:3rem;
+
+    color:var(--brown);
+}
+
+/* INCOME SECTION */
+
+.income-section{
+
+    margin-bottom:50px;
+}
+
+/* INCOME GRID */
+
+.income-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:25px;
+
+    margin-bottom:30px;
+}
+
+/* INCOME CARD */
+
+.income-card{
+
+    background:
+    linear-gradient(
+    135deg,
+    rgba(214,177,120,.95),
+    rgba(231,201,146,.85));
+
+    border-radius:35px;
+
+    padding:35px;
+
+    color:#1d1d1d;
+
+    position:relative;
+
+    overflow:hidden;
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,.08);
+
+    transition:.3s;
+}
+
+.income-card:hover{
+
+    transform:translateY(-6px);
+}
+
+.income-card i{
+
+    font-size:2rem;
+
+    margin-bottom:20px;
+}
+
+.income-card h3{
+
+    margin-bottom:10px;
+
+    font-size:1rem;
+}
+
+.income-card h2{
+
+    font-size:3rem;
+
+    margin-bottom:15px;
+}
+
+.income-card p{
+
+    opacity:.8;
+}
+
+/* CHART */
+
+.income-chart{
+
+    background:
+    rgba(255,255,255,.55);
+
+    backdrop-filter:blur(12px);
+
+    border-radius:35px;
+
+    padding:35px;
+
+    border:
+    1px solid rgba(255,255,255,.25);
+}
+
+/* FAKE CHART */
+
+.fake-chart{
+
+    width:100%;
+
+    height:300px;
+
+    display:flex;
+
+    align-items:flex-end;
+
+    justify-content:space-between;
+
+    gap:20px;
+
+    margin-top:40px;
+}
+
+.bar{
+
+    width:100%;
+
+    border-radius:20px 20px 0 0;
+
+    background:
+    linear-gradient(
+    180deg,
+    #e7c992,
+    #d6b178);
+}
+
+.bar.one{height:120px;}
+.bar.two{height:180px;}
+.bar.three{height:150px;}
+.bar.four{height:250px;}
+.bar.five{height:210px;}
+.bar.six{height:280px;}
+
+/* STATS */
+
+.stats-section{
+
+    margin-bottom:50px;
+}
+
+.stats-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:25px;
+}
+
+/* CARDS */
+
+.stat-card,
+.card{
+
+    background:
+    rgba(255,255,255,.55);
+
+    backdrop-filter:blur(12px);
+
+    border:
+    1px solid rgba(255,255,255,.25);
+
+    border-radius:35px;
+
+    padding:35px;
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,.04);
+
+    transition:.3s;
+}
+
+.stat-card:hover,
+.card:hover{
+
+    transform:translateY(-6px);
+}
+
+/* STAT */
+
+.stat-card i{
+
+    font-size:2rem;
+
+    color:var(--primary);
+
+    margin-bottom:20px;
+}
+
+.stat-card h3{
+
+    color:var(--gray);
+
+    margin-bottom:10px;
+}
+
+.stat-card h2{
+
+    font-size:3rem;
+
+    color:var(--brown);
+
+    margin-bottom:15px;
+}
+
+.stat-card p{
+
+    color:var(--gray);
+}
+
+/* PROGRESS */
+
+.progress{
+
+    width:100%;
+
+    height:12px;
+
+    border-radius:20px;
+
+    background:
+    rgba(214,177,120,.15);
+
+    overflow:hidden;
+
+    margin-top:20px;
+}
+
+.progress-fill{
+
+    height:100%;
+
+    border-radius:20px;
+
+    background:
+    linear-gradient(
+    135deg,
+    #d6b178,
+    #e7c992);
+}
+
+.progress-fill.one{
+    width:85%;
+}
+
+.progress-fill.two{
+    width:65%;
+}
+
+/* CONTENT GRID */
+
+.content-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(2,1fr);
+
+    gap:25px;
+}
+
+/* CARD TITLE */
+
+.card-title{
+
+    margin-bottom:30px;
+}
+
+.card-title h2{
+
+    font-family:
+    'Cormorant Garamond',
+    serif;
+
+    font-size:2.5rem;
+
+    color:var(--brown);
+}
+
+/* TASKS */
+
+.tasks{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+}
+
+.tasks label{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    font-size:1.05rem;
+
+    color:var(--gray);
+}
+
+/* AGENDA */
+
+.agenda{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+}
+
+.agenda-item{
+
+    background:
+    rgba(214,177,120,.12);
+
+    padding:18px 20px;
+
+    border-radius:18px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+}
+
+/* DARK MODE */
+
+body.dark{
+
+    background:
+    radial-gradient(
+    circle at top left,
+    #2b1f18,
+    #161312 60%);
+
+    color:#fff;
+}
+
+body.dark .sidebar{
+
+    background:
+    rgba(20,20,20,.65);
+
+    border-right:
+    1px solid rgba(255,255,255,.05);
+}
+
+body.dark .card,
+body.dark .stat-card,
+body.dark .income-chart,
+body.dark .notification-panel{
+
+    background:
+    rgba(32,28,26,.75);
+
+    border:
+    1px solid rgba(255,255,255,.05);
+}
+
+body.dark .menu a,
+body.dark .logo-area h2,
+body.dark .topbar h1,
+body.dark .card-title h2,
+body.dark .sidebar-profile h3,
+body.dark .section-header h2{
+
+    color:#fff;
+}
+
+body.dark .sidebar-profile span,
+body.dark .stat-card h3,
+body.dark .stat-card p,
+body.dark .agenda-item p,
+body.dark .agenda-item span,
+body.dark .notification-panel p,
+body.dark .tasks label{
+
+    color:#d0d0d0;
+}
+
+body.dark .agenda-item{
+
+    background:
+    rgba(255,255,255,.04);
+}
+
+body.dark .dark-btn,
+body.dark .notification-btn,
+body.dark .menu-toggle{
+
+    background:
+    rgba(255,255,255,.08);
+}
+
+body.dark .dark-btn i,
+body.dark .notification-btn i,
+body.dark .menu-toggle i{
+
+    color:#fff;
+}
+
+body.dark .stat-card h2{
+
+    color:#fff;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:1100px){
+
+    .income-grid,
+    .stats-grid,
+    .content-grid{
+
+        grid-template-columns:1fr;
+    }
+}
+
+@media(max-width:900px){
+
+    .dashboard{
+
+        grid-template-columns:1fr;
+    }
+
+    .sidebar{
+
+        position:fixed;
+
+        left:-100%;
+
+        top:0;
+
+        width:280px;
+
+        z-index:999;
+    }
+
+    .sidebar.active{
+
+        left:0;
+    }
+
+    .menu-toggle{
+
+        display:block;
+    }
+
+    .topbar{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:20px;
+    }
+
+    .topbar h1{
+
+        font-size:3rem;
+    }
+
+    .main-content{
+
+        padding:25px;
+    }
+
+    .section-header h2{
+
+        font-size:2.5rem;
+    }
+}
+/* ========================= */
+/* MENU NEW */
+/* ========================= */
+
+.menu{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:35px;
+}
+
+/* SECTION */
+
+.menu-section{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:14px;
+}
+
+/* TITLE */
+
+.menu-title{
+
+    font-size:.78rem;
+
+    font-weight:700;
+
+    letter-spacing:1px;
+
+    text-transform:uppercase;
+
+    color:var(--primary);
+
+    padding-left:10px;
+
+    margin-bottom:5px;
+}
+
+/* ========================= */
+/* WORKPLANS */
+/* ========================= */
+
+.workplans-section{
+
+    margin-bottom:50px;
+}
+
+/* GRID */
+
+.workplans-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:25px;
+}
+
+/* CARD */
+
+.workplan-card{
+
+    background:
+    rgba(255,255,255,.55);
+
+    backdrop-filter:blur(12px);
+
+    border:
+    1px solid rgba(255,255,255,.25);
+
+    border-radius:35px;
+
+    padding:35px;
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,.04);
+
+    transition:.3s;
+}
+
+.workplan-card:hover{
+
+    transform:translateY(-6px);
+}
+
+/* TOP */
+
+.workplan-top{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:25px;
+}
+
+.workplan-top i{
+
+    font-size:1.8rem;
+
+    color:var(--primary);
+}
+
+/* STATUS */
+
+.plan-status{
+
+    padding:8px 14px;
+
+    border-radius:12px;
+
+    font-size:.85rem;
+
+    font-weight:600;
+}
+
+.plan-status.active{
+
+    background:
+    rgba(76,175,80,.15);
+
+    color:#4caf50;
+}
+
+.plan-status.neutral{
+
+    background:
+    rgba(214,177,120,.18);
+
+    color:var(--brown);
+}
+
+.plan-status.gold{
+
+    background:
+    rgba(255,215,0,.18);
+
+    color:#caa100;
+}
+
+/* TITLES */
+
+.workplan-card h3{
+
+    font-size:2rem;
+
+    margin-bottom:15px;
+
+    color:var(--brown);
+}
+
+/* TEXT */
+
+.workplan-card p{
+
+    color:var(--gray);
+
+    line-height:1.7;
+
+    margin-bottom:20px;
+}
+
+/* INFO */
+
+.plan-info{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    margin-bottom:25px;
+}
+
+.plan-info span{
+
+    display:block;
+
+    color:var(--gray);
+
+    margin-bottom:6px;
+}
+
+/* TASKS */
+
+.tasks{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+}
+
+.tasks label{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+}
+
+/* DARK */
+
+body.dark .workplan-card{
+
+    background:
+    rgba(32,28,26,.75);
+
+    border:
+    1px solid rgba(255,255,255,.05);
+}
+
+body.dark .workplan-card h3{
+
+    color:#fff;
+}
+
+body.dark .workplan-card p,
+body.dark .plan-info span{
+
+    color:#d0d0d0;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:1100px){
+
+    .workplans-grid{
+
+        grid-template-columns:1fr;
+    }
+}

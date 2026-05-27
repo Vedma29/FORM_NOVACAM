@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard | NovaCam</title>
+
+    <!-- GOOGLE FONTS -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+
+    <!-- FONT AWESOME -->
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- CSS -->
+
+    <link rel="stylesheet"
+    href="../css/dashboard.css">
+
+</head> 
+
+<body>
+
+<section class="dashboard">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <!-- LOGO -->
+
+        <div class="logo-area">
+
+            <img src="../img/logo_novacam.png"
+            alt="NovaCam">
+
+            <h2>
+
+                NovaCam
+
+            </h2>
+
+        </div>
+
+        <!-- MENU -->
+
+       <nav class="menu">
+
+    <!-- PRINCIPAL -->
+
+    <div class="menu-section">
+
+        <span class="menu-title">
+
+            PRINCIPAL
+
+        </span>
+
+        <a href="dashboard.html"
+        class="active">
+
+            <i class="fa-solid fa-house"></i>
+
+            Dashboard
+
+        </a>
+
+        <a href="income.html">
+
+            <i class="fa-solid fa-wallet"></i>
+
+            Ingresos
+
+        </a>
+
+        <a href="stats.html">
+
+            <i class="fa-solid fa-chart-line"></i>
+
+            Estadísticas
+
+        </a>
+
+    </div>
+
+    <!-- ORGANIZACIÓN -->
+
+    <div class="menu-section">
+
+        <span class="menu-title">
+
+            ORGANIZACIÓN
+
+        </span>
+
+        <a href="agenda.html">
+
+            <i class="fa-solid fa-calendar"></i>
+
+            Agenda
+
+        </a>
+
+        <a href="goals.html">
+
+            <i class="fa-solid fa-bullseye"></i>
+
+            Metas
+
+        </a>
+
+        <a href="workplans.html">
+
+            <i class="fa-solid fa-clipboard-list"></i>
+
+            Planes
+
+        </a>
+
+    </div>
+
+    <!-- FORMACIÓN -->
+
+    <div class="menu-section">
+
+        <span class="menu-title">
+
+            FORMACIÓN
+
+        </span>
+
+        <a href="academy.html">
+
+            <i class="fa-solid fa-graduation-cap"></i>
+
+            Academy
+
+        </a>
+
+        <a href="community.html">
+
+            <i class="fa-solid fa-users"></i>
+
+            Comunidad
+
+        </a>
+
+    </div>
+
+    <!-- CUENTA -->
+
+    <div class="menu-section">
+
+        <span class="menu-title">
+
+            CUENTA
+
+        </span>
+
+        <a href="profile.html">
+
+            <i class="fa-solid fa-gear"></i>
+
+            Configuración
+
+        </a>
+
+    </div>
+
+</nav>
+
+        <!-- PROFILE -->
+
+        <div class="sidebar-profile">
+
+            <img id="sidebarImage"
+            src="../img/profile_novacam.png"
+            alt="Perfil">
+
+            <div>
+
+                <h3 id="sidebarName">
+
+                    NovaGirl
+
+                </h3>
+
+                <span>
+
+                    Premium Member
+
+                </span>
+
+            </div>
+
+        </div>
+
+        <!-- LOGOUT -->
+
+        <a href="logout.html"
+        class="logout-btn">
+
+            <i class="fa-solid fa-right-from-bracket"></i>
+
+            Cerrar Sesión
+
+        </a>
+
+    </aside>
+
+    <!-- MAIN -->
+
+    <main class="main-content">
+
+        <!-- TOPBAR -->
+
+        <div class="topbar">
+
+            <div>
+
+                <span class="mini-title">
+
+                    Bienvenida de nuevo ✨
+
+                </span>
+
+                <h1>
+
+                    Dashboard NovaCam
+
+                </h1>
+
+            </div>
+
+            <!-- ACTIONS -->
+
+            <div class="top-actions">
+
+                <!-- MENU -->
+
+                <button class="menu-toggle">
+
+                    <i class="fa-solid fa-bars"></i>
+
+                </button>
+
+                <!-- DARK -->
+
+                <button class="dark-btn">
+
+                    <i class="fa-solid fa-moon"></i>
+
+                </button>
+
+                <!-- NOTIFICATIONS -->
+
+                <div class="notification-wrapper">
+
+                    <button class="notification-btn"
+                    onclick="toggleNotifications()">
+
+                        <i class="fa-solid fa-bell"></i>
+
+                        <span class="notification-dot"></span>
+
+                    </button>
+
+                    <!-- PANEL -->
+
+                    <div class="notification-panel"
+                    id="notificationPanel">
+
+                        <h3>
+
+                            Notificaciones
+
+                        </h3>
+
+                        <p>
+
+                            No tienes notificaciones ✨
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- INCOME -->
+
+        <section class="income-section">
+
+            <div class="section-header">
+
+                <span class="mini-title">
+
+                    Finanzas
+
+                </span>
+
+                <h2>
+
+                    Resumen de Ingresos
+
+                </h2>
+
+            </div>
+
+            <!-- GRID -->
+
+            <div class="income-grid">
+
+                <!-- MONTHLY -->
+
+                <div class="income-card">
+
+                    <i class="fa-solid fa-wallet"></i>
+
+                    <h3>
+
+                        Ingresos Mensuales
+
+                    </h3>
+
+                    <h2 id="dashboardIncome">
+
+                        $0 COP
+
+                    </h2>
+
+                    <p>
+
+                        Actualizado automáticamente
+
+                    </p>
+
+                </div>
+
+                <!-- BEST -->
+
+                <div class="income-card">
+
+                    <i class="fa-solid fa-fire"></i>
+
+                    <h3>
+
+                        Mejor Día
+
+                    </h3>
+
+                    <h2 id="dashboardBestDay">
+
+                        $0 COP
+
+                    </h2>
+
+                    <p>
+
+                        Ingreso más alto
+
+                    </p>
+
+                </div>
+
+                <!-- GOAL -->
+
+                <div class="income-card">
+
+                    <i class="fa-solid fa-trophy"></i>
+
+                    <h3>
+
+                        Meta Mensual
+
+                    </h3>
+
+                    <h2>
+
+                        85%
+
+                    </h2>
+
+                    <div class="progress">
+
+                        <div class="progress-fill one"></div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- CHART -->
+
+            <div class="income-chart">
+
+                <div class="card-title">
+
+                    <h2>
+
+                        Evolución de Ingresos
+
+                    </h2>
+
+                </div>
+
+                <div class="fake-chart">
+
+                    <div class="bar one"></div>
+
+                    <div class="bar two"></div>
+
+                    <div class="bar three"></div>
+
+                    <div class="bar four"></div>
+
+                    <div class="bar five"></div>
+
+                    <div class="bar six"></div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- STATS -->
+
+        <section class="stats-section">
+
+            <div class="section-header">
+
+                <span class="mini-title">
+
+                    Productividad
+
+                </span>
+
+                <h2>
+
+                    Estadísticas Generales
+
+                </h2>
+
+            </div>
+
+            <!-- GRID -->
+
+            <div class="stats-grid">
+
+                <!-- HOURS -->
+
+                <div class="stat-card">
+
+                    <i class="fa-solid fa-clock"></i>
+
+                    <h3>
+
+                        Horas Stream
+
+                    </h3>
+
+                    <h2>
+
+                        32h
+
+                    </h2>
+
+                    <div class="progress">
+
+                        <div class="progress-fill two"></div>
+
+                    </div>
+
+                </div>
+
+                <!-- STREAMS -->
+
+                <div class="stat-card">
+
+                    <i class="fa-solid fa-video"></i>
+
+                    <h3>
+
+                        Transmisiones
+
+                    </h3>
+
+                    <h2>
+
+                        18
+
+                    </h2>
+
+                    <p>
+
+                        Esta semana
+
+                    </p>
+
+                </div>
+
+                <!-- DAYS -->
+
+                <div class="stat-card">
+
+                    <i class="fa-solid fa-calendar"></i>
+
+                    <h3>
+
+                        Días Registrados
+
+                    </h3>
+
+                    <h2 id="dashboardDays">
+
+                        0
+
+                    </h2>
+
+                    <p>
+
+                        Días únicos registrados
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- WORKPLANS -->
+
+<section class="workplans-section">
+
+    <div class="section-header">
+
+        <span class="mini-title">
+
+            Organización Profesional ✨
+
+        </span>
+
+        <h2>
+
+            Planes de Trabajo
+
+        </h2>
+
+    </div>
+
+    <!-- GRID -->
+
+    <div class="workplans-grid">
+
+        <!-- PLAN -->
+
+        <div class="workplan-card">
+
+            <div class="workplan-top">
+
+                <span class="plan-status active">
+
+                    Activo
+
+                </span>
+
+                <i class="fa-solid fa-fire"></i>
+
+            </div>
+
+            <h3>
+
+                Growth Plan
+
+            </h3>
+
+            <p>
+
+                Rutina enfocada en constancia,
+                ingresos y disciplina profesional.
+
+            </p>
+
+            <!-- INFO -->
+
+            <div class="plan-info">
+
+                <div>
+
+                    <span>
+
+                        Inicio
+
+                    </span>
+
+                    <strong>
+
+                        10 Mayo
+
+                    </strong>
+
+                </div>
+
+                <div>
+
+                    <span>
+
+                        Finaliza
+
+                    </span>
+
+                    <strong>
+
+                        31 Mayo
+
+                    </strong>
+
+                </div>
+
+            </div>
+
+            <!-- PROGRESS -->
+
+            <div class="progress">
+
+                <div class="progress-fill two"></div>
+
+            </div>
+
+            <p class="progress-text">
+
+                Día 7 de 21
+
+            </p>
+
+        </div>
+
+        <!-- TASKS -->
+
+        <div class="workplan-card">
+
+            <div class="workplan-top">
+
+                <span class="plan-status neutral">
+
+                    Tareas
+
+                </span>
+
+                <i class="fa-solid fa-list-check"></i>
+
+            </div>
+
+            <div class="tasks">
+
+                <label>
+
+                    <input type="checkbox"
+                    checked>
+
+                    Completar transmisión
+
+                </label>
+
+                <label>
+
+                    <input type="checkbox">
+
+                    Revisar estadísticas
+
+                </label>
+
+                <label>
+
+                    <input type="checkbox">
+
+                    Actualizar metas
+
+                </label>
+
+            </div>
+
+        </div>
+
+        <!-- GOAL -->
+
+        <div class="workplan-card">
+
+            <div class="workplan-top">
+
+                <span class="plan-status gold">
+
+                    Meta Semanal
+
+                </span>
+
+                <i class="fa-solid fa-trophy"></i>
+
+            </div>
+
+            <h3>
+
+                15.000 Tokens
+
+            </h3>
+
+            <p>
+
+                Objetivo semanal actual
+                para desbloquear nuevos planes.
+
+            </p>
+
+            <div class="progress">
+
+                <div class="progress-fill one"></div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+        <!-- CONTENT -->
+
+        <section class="content-grid">
+
+            <!-- GOALS -->
+
+            <div class="card">
+
+                <div class="card-title">
+
+                    <h2>
+
+                        Metas
+
+                    </h2>
+
+                </div>
+
+                <div class="tasks">
+
+                    <label>
+
+                        <input type="checkbox"
+                        checked>
+
+                        Completar 5 transmisiones
+
+                    </label>
+
+                    <label>
+
+                        <input type="checkbox"
+                        checked>
+
+                        Actualizar perfil premium
+
+                    </label>
+
+                    <label>
+
+                        <input type="checkbox">
+
+                        Llegar a meta semanal
+
+                    </label>
+
+                </div>
+
+            </div>
+
+            <!-- AGENDA -->
+
+            <div class="card">
+
+                <div class="card-title">
+
+                    <h2>
+
+                        Agenda
+
+                    </h2>
+
+                </div>
+
+                <div class="agenda">
+
+                    <div class="agenda-item">
+
+                        <span>
+
+                            Lunes
+
+                        </span>
+
+                        <p>
+
+                            8:00 PM
+
+                        </p>
+
+                    </div>
+
+                    <div class="agenda-item">
+
+                        <span>
+
+                            Viernes
+
+                        </span>
+
+                        <p>
+
+                            9:00 PM
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</section>
+
+<!-- SCRIPT -->
+
+<script>
+
+/* ========================= */
+/* DARK MODE */
+/* ========================= */
+
+const darkBtn =
+document.querySelector(
+".dark-btn");
+
+darkBtn.addEventListener(
+"click",
+
+() => {
+
+    document.body.classList.toggle(
+    "dark");
+
+    localStorage.setItem(
+
+    "novacamDarkMode",
+
+    document.body.classList.contains(
+    "dark")
+    );
+});
+
+/* ========================= */
+/* MOBILE MENU */
+/* ========================= */
+
+const menuToggle =
+document.querySelector(
+".menu-toggle");
+
+const sidebar =
+document.querySelector(
+".sidebar");
+
+menuToggle.addEventListener(
+"click",
+
+() => {
+
+    sidebar.classList.toggle(
+    "active");
+
+});
+
+/* ========================= */
+/* NOTIFICATIONS */
+/* ========================= */
+
+function toggleNotifications(){
+
+    document.getElementById(
+    "notificationPanel")
+
+    .classList.toggle(
+    "active");
+}
+
+/* ========================= */
+/* LOAD */
+/* ========================= */
+
+window.onload = function(){
+
+    /* PROFILE */
+
+    const savedName =
+    localStorage.getItem(
+    "novacamUser");
+
+    const savedImage =
+    localStorage.getItem(
+    "novacamProfileImage");
+
+    const darkMode =
+    localStorage.getItem(
+    "novacamDarkMode");
+
+    if(savedName){
+
+        document.getElementById(
+        "sidebarName").innerHTML =
+        savedName;
+    }
+
+    if(savedImage){
+
+        document.getElementById(
+        "sidebarImage").src =
+        savedImage;
+    }
+
+    if(darkMode === "true"){
+
+        document.body.classList.add(
+        "dark");
+    }
+
+    /* ========================= */
+    /* LOAD INCOME */
+    /* ========================= */
+
+    const monthlyIncome =
+    localStorage.getItem(
+    "novacamMonthlyIncome");
+
+    const bestDay =
+    localStorage.getItem(
+    "novacamBestDay");
+
+    const totalDays =
+    localStorage.getItem(
+    "novacamDays");
+
+    /* MONTHLY */
+
+    if(monthlyIncome){
+
+        document.getElementById(
+        "dashboardIncome").innerHTML =
+
+        "$" +
+
+        Math.round(monthlyIncome)
+        .toLocaleString("es-CO")
+
+        + " COP";
+    }
+
+    /* BEST */
+
+    if(bestDay){
+
+        document.getElementById(
+        "dashboardBestDay").innerHTML =
+
+        "$" +
+
+        Math.round(bestDay)
+        .toLocaleString("es-CO")
+
+        + " COP";
+    }
+
+    /* DAYS */
+
+    if(totalDays){
+
+        document.getElementById(
+        "dashboardDays").innerHTML =
+        totalDays;
+    }
+}
+
+</script>
+
+</body>
+
+</html>
